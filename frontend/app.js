@@ -7,7 +7,7 @@
 // ==================== CONFIGURATION ====================
 const API_BASE_URL = window.location.hostname === 'localhost'
     ? 'http://localhost:5000/api'
-    : 'https://disciplined-embrace-production-9079.up.railway.app/api';
+    : 'https://web-production-370b8.up.railway.app/api';
 
 // ==================== STATE ====================
 const state = {
