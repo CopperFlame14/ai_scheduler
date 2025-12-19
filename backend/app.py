@@ -45,7 +45,9 @@ app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 
 CORS(app, supports_credentials=True, origins=[
     'https://aria-app-sigma.vercel.app',  # Production frontend (Vercel)
-    'http://localhost:5000'  # Local development
+    'https://ai-scheduler-bay.vercel.app',  # Your Vercel deployment
+    'http://localhost:5000',  # Local development
+    'http://localhost:3000'   # Local frontend dev server
 ])
 
 # Initialize components
@@ -230,7 +232,7 @@ def auth_google_callback():
             'name': google_name
         }
         query_string = urllib.parse.urlencode(params)
-        redirect_url = f'https://aria-app-sigma.vercel.app/?{query_string}'
+        redirect_url = f'https://ai-scheduler-bay.vercel.app/?{query_string}'
         print(f"Redirecting to: {redirect_url}")
         return redirect(redirect_url)
     
@@ -241,7 +243,7 @@ def auth_google_callback():
         print(f"Full traceback: {error_details}")
         # URL-encode the error message for safe transport
         error_msg = urllib.parse.quote(str(e))
-        return redirect(f'https://aria-app-sigma.vercel.app/?oauth_error={error_msg}')
+        return redirect(f'https://ai-scheduler-bay.vercel.app/?oauth_error={error_msg}')
 
 @app.route('/auth/logout', methods=['POST'])
 def auth_logout():
