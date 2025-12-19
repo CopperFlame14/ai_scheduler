@@ -103,7 +103,7 @@ SCOPES = [
     'https://www.googleapis.com/auth/userinfo.profile'
 ]
 REDIRECT_URI = os.getenv('GOOGLE_REDIRECT_URI', 
-    'https://disciplined-embrace-production-9079.up.railway.app/auth/google/callback')
+    'https://web-production-370b8.up.railway.app/auth/google/callback')
 
 # ==================== HELPER FUNCTIONS ====================
 

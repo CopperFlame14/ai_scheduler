@@ -312,7 +312,7 @@ async function loginWithGoogle() {
     try {
         const apiUrl = window.location.hostname === 'localhost'
             ? 'http://localhost:5000/auth/google'
-            : 'https://disciplined-embrace-production-9079.up.railway.app/auth/google';
+            : 'https://web-production-370b8.up.railway.app/auth/google';
         const response = await fetch(apiUrl);
         const data = await response.json();
 

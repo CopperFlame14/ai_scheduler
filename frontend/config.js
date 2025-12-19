@@ -3,7 +3,7 @@ const config = {
     // API URL - will be different in production
     API_URL: window.location.hostname === 'localhost'
         ? 'http://localhost:5000'
-        : 'https://disciplined-embrace-production-9079.up.railway.app', // Railway backend
+        : 'https://web-production-370b8.up.railway.app', // Railway backend
 
     // OAuth redirect - automatically uses current domain
     OAUTH_REDIRECT: window.location.origin + '/auth/google/callback',
